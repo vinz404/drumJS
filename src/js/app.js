@@ -4,9 +4,17 @@ const buttonContainer = document.getElementById("buttonContainer");
  * Plays the specified audio file.
  * @param {string} audioFile - The path to the audio file.
  */
-const playSound = (audioFile) => {
-  const audio = new Audio(audioFile);
-  audio.preload = "auto";
+const audioFiles = {
+  tom: new Audio("../assets/tom.wav"),
+  kick: new Audio("../assets/kick.wav"),
+  snare: new Audio("../assets/snare.wav"),
+  ride: new Audio("../assets/ride.wav"),
+  hihat: new Audio("../assets/hihat.wav"),
+  openhat: new Audio("../assets/openhat.wav"),
+};
+
+const playSound = (audio) => {
+  audio.currentTime = 0;
   audio.play();
 };
 
@@ -18,17 +26,17 @@ buttonContainer.addEventListener("click", (event) => {
     button.classList.add("btnTransition");
 
     if (buttonId === "a") {
-      playSound("../assets/tom.wav");
+      playSound(audioFiles.kick);
     } else if (buttonId === "s") {
-      playSound("../assets/kick.wav");
+      playSound(audioFiles.snare);
     } else if (buttonId === "d") {
-      playSound("../assets/snare.wav");
+      playSound(audioFiles.ride);
     } else if (buttonId === "j") {
-      playSound("../assets/ride.wav");
+      playSound(audioFiles.tom);
     } else if (buttonId === "k") {
-      playSound("../assets/hihat.wav");
+      playSound(audioFiles.openhat);
     } else if (buttonId === "l") {
-      playSound("../assets/openhat.wav");
+      playSound(audioFiles.hihat);
     }
 
     button.addEventListener(
@@ -47,17 +55,17 @@ document.addEventListener("keydown", (event) => {
     button.classList.add("btnTransition");
 
     if (event.key === "a") {
-      playSound("../assets/tom.wav");
+      playSound(audioFiles.kick);
     } else if (event.key === "s") {
-      playSound("../assets/kick.wav");
+      playSound(audioFiles.snare);
     } else if (event.key === "d") {
-      playSound("../assets/snare.wav");
+      playSound(audioFiles.ride);
     } else if (event.key === "j") {
-      playSound("../assets/ride.wav");
+      playSound(audioFiles.tom);
     } else if (event.key === "k") {
-      playSound("../assets/hihat.wav");
+      playSound(audioFiles.openhat);
     } else if (event.key === "l") {
-      playSound("../assets/openhat.wav");
+      playSound(audioFiles.hihat);
     }
 
     button.addEventListener(
@@ -68,4 +76,10 @@ document.addEventListener("keydown", (event) => {
       { once: true }
     );
   }
+});
+
+window.addEventListener("load", () => {
+  Object.values(audioFiles).forEach((audio) => {
+    audio.load();
+  });
 });
