@@ -18,5 +18,8 @@ This project is a simple experiment created to practice and showcase my recent l
 You can also check out the live demo [here](https://drum-js-red.vercel.app) to experience the drum kit in action.
 
 ---
+## 🎵 Sound Source
+
+The drum sounds used in this project were obtained from [harsh98trivedi/Drum-Kit](https://github.com/harsh98trivedi/Drum-Kit) on GitHub. Credit goes to the author for providing these sounds.
 
 Enjoy playing around with **Drum JS: A Simple Experiment** as you explore the world of web development in a playful way! 🎶✨
