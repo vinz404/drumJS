@@ -6,6 +6,7 @@ const buttonContainer = document.getElementById("buttonContainer");
  */
 const playSound = (audioFile) => {
   const audio = new Audio(audioFile);
+  audio.preload = "auto";
   audio.play();
 };
 
