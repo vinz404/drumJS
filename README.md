@@ -9,9 +9,9 @@ This project is a simple experiment created to practice and showcase my recent l
 
 ## 🚀 How to Use
 
-1. **Clone the Project**: Clone or download this project repository.
-2. **Explore Locally**: Open the `index.html` file in a web browser.
-3. **Play the Drums**: Click the buttons on the screen or use the keyboard keys (a, s, d, j, k, l) to trigger drum sounds.
+1. Clone or download this project repository.
+2. Open the `index.html` file in a web browser.
+3. Click the buttons on the screen or use the keyboard keys (a, s, d, j, k, l) to trigger drum sounds.
 
 ## 🔍 Demo
 
