@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.btnStyle {
+  @apply w-20 h-20 bg-springFields rounded-md drop-shadow-[-3px_3px_0px_rgba(148,180,159)] text-4xl font-extrabold;
+}
+
+.btnTransition {
+  @apply -translate-y-4 transition-transform duration-100 ease-in-out;
+}
